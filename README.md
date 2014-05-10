@@ -18,7 +18,7 @@ such courseware, exercise materials. They can also download any resource from th
 
 ###需求文档
 <table>
-<tr><th>文档</th><th>人</th><th>截止日期</th></tr>
+<tr><th>文档序号</th><th>内容</th><th>具体内容</th></tr>
 <tr><td>1</td><td>引言</td><td>编写目的、背景、定义、参考资料</td></tr>
 <tr><td>2</td><td>任务概述</td><td>目标、用户的特点、假定和约束</td></tr>
 <tr><td>3</td><td>用户场景</td><td>用例、用例图、3IPO图</td></tr>
