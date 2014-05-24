@@ -22,6 +22,5 @@ such courseware, exercise materials. They can also download any resource from th
 <tr><td>3</td><td>All</td><td>5月30日</td></tr>
 <tr><td>4</td><td>辜逸龙</td><td>6月1日</td></tr>
 <tr><td>5</td><td>王逍语</td><td>6月1日</td></tr>
-<tr><td>6</td><td>陈超</td><td>6月1日</td></tr>
-<tr><td>7</td><td>陈超</td><td>6月1日</td></tr>
+<tr><td>6、7</td><td>陈超</td><td>6月1日</td></tr>
 </table>
