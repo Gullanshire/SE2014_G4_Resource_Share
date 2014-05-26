@@ -17,11 +17,10 @@ such courseware, exercise materials. They can also download any resource from th
 ###设计文档工作分工
 <table>
 <tr><th>任务</th><th>人</th><th>截止日期</th></tr>
-<tr><td>1</td><td>?</td><td>5月25日</td></tr>
-<tr><td>2</td><td>?</td><td>5月25日</td></tr>
+<tr><td>1</td><td>王睿</td><td>5月25日</td></tr>
+<tr><td>2</td><td>王璐</td><td>5月25日</td></tr>
 <tr><td>3</td><td>All</td><td>5月30日</td></tr>
 <tr><td>4</td><td>辜逸龙</td><td>6月1日</td></tr>
 <tr><td>5</td><td>王逍语</td><td>6月1日</td></tr>
-<tr><td>6</td><td>?</td><td>6月1日</td></tr>
-<tr><td>7</td><td>Same to 6</td><td>6月1日</td></tr>
+<tr><td>6、7</td><td>陈超</td><td>6月1日</td></tr>
 </table>
