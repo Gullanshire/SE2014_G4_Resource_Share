@@ -20,9 +20,10 @@ such courseware, exercise materials. They can also download any resource from th
 <tr><td>1</td><td>王睿</td><td>Done</td></tr>
 <tr><td>2</td><td>金璐</td><td>Done</td></tr>
 <tr><td>3.8数据库连接设计 9数据安全性检测模块</td><td>陈超</td><td>6月2日</td></tr>
-<tr><td>3.2个人资源管理模块 3资源搜索模块  4资源上传模块</td><td>王逍语 辜逸龙</td><td>6月2日</td></tr>
+<tr><td>3.2个人资源管理模块 3资源搜索模块  4资源上传模块</td><td>王逍语</td><td>6月2日</td></tr>
 <tr><td>3.1用户登录模块  5作业布置模块  6作业上传模块  7作业检查模块</td><td>王睿 金璐</td><td>6月2日</td></tr>
 <tr><td>4</td><td>辜逸龙</td><td>6月2日</td></tr>
 <tr><td>5</td><td>王逍语</td><td>Done</td></tr>
 <tr><td>6、7</td><td>陈超</td><td>6月2日</td></tr>
+<tr><td>整合</td><td>辜逸龙</td><td>6月4日</td></tr>
 </table>
