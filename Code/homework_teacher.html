@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Subsystem for resource sharing">
+    <meta name="author" content="Syntax_Error">
+    <link rel="shortcut icon" href="">
+
+    <title>Check homework</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link href="./css/mainstyle.css" rel="stylesheet">
+	<link href="http://v3.bootcss.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	<div id="wrap">
+	  
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          	<a class="navbar-brand" href="">Resource Sharing System</a>
+			</div><!--navbar-header-->
+			
+		  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="">Homework</a></li>
+              <li><a href="">Resource</a></li>
+              <li><a href="">Search</a></li>
+              <li class="dropdown">
+	              <a href="" class="dropdown-toggle" data-toggle="dropdown">Other Subsystem<b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li class="dropdown-header" style="font-size:18px">The portals:</li>
+	                <li style="height:3px"><br/></li>
+	                <li><a href="">Information Management System</a></li>
+	                <li class="divider"></li>
+	                <li><a href="">Automatic Course Arrangement Subsystem</a></li>
+	                <li class="divider"></li>
+	                <li><a href="">Course Selection Subsystem</a></li>
+	                <li class="divider"></li>
+	                <li><a href="">Discussion Forum Subsystem</a></li>
+	                <li class="divider"></li>
+	                <li><a href="">Online Testing Subsystem</a></li>
+	                <li class="divider"></li>
+	                <li><a href="">Score Management Subsystem</a></li>
+	              </ul>
+              </li>
+            </ul><!--nav navbar-nav-->
+			<button id="logout" type="button" class="btn btn-success navbar-btn navbar-right">Log out</button> 
+          </div><!--/.nav-collapse -->
+        </div><!--container-fluid-->
+        </div><!--navbar navbar-inverse navbar-fixed-top-->
+		
+
+		
+		
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+			  <ul class="nav nav-sidebar">
+				<li>
+				  <a href="#" class="list-group-item">
+				  <span class="badge">4</span><!--number of homework in this course-->
+				  Course 1
+				  </a>
+				</li>
+				<li>
+				  <a href="#" class="list-group-item">
+				  <span class="badge">12</span>
+				  Course 2
+				  </a>
+				</li>
+				<li>
+				  <a href="#" class="list-group-item">
+				  <span class="badge">3</span>
+				  Course 3
+				  </a>
+				</li>
+				<li>
+				  <a href="#" class="list-group-item">
+				  <span class="badge">1</span>
+				  Course 4
+				  </a>
+				</li>
+				<li>
+				  <a href="#" class="list-group-item">
+				  <span class="badge">0</span>
+				  Course 5
+				  </a>
+				</li>
+			  </ul><!--nav nav-sidebar-->
+			</div><!--col-sm-3 col-md-2 sidebar-->
+			
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			
+			<!--1. this component would show by default, then replaced by component(2)-->
+			 <div class="jumbotron">
+			  <h1>Check homework or <br>Assign new homework</h1>
+			  <p>You may check the homework submitted by students, or assign a new one. To start, click one of your courses on the left!</p>
+			</div>
+			<!--End of component(1)-->
+
+			  <!--2. This is component (2) which will replace (1) after user clicks a course-->
+			  <h1 class="page-header">Course ID and name</h1>
+			  <div class="row placeholders">
+			    
+				<!--If already have homework, display this!!!!!!-->
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal1">
+					  <span class="glyphicon glyphicon-folder-open"></span>
+					</button>		  			  
+					<a href="#list"><h4>Title of hw1</h4></a>
+				  <span class="text-muted">Deadline of homework1</span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal1">
+					  <span class="glyphicon glyphicon-folder-open"></span>
+					</button>		  			  
+					<a href="#list"><h4>Title of hw2</h4></a>
+				  <span class="text-muted">Deadline of homework2</span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal1">
+					  <span class="glyphicon glyphicon-folder-open"></span>
+					</button>		  
+					<a href="#list"><h4>Title of hw3</h4></a>
+				  <span class="text-muted">Deadline of homework3</span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal1">
+					  <span class="glyphicon glyphicon-folder-open"></span>
+					</button>		  
+					<a href="#list"><h4>Title of hw4</h4></a>
+				  <span class="text-muted">Deadline of homework4</span>
+				</div>
+				
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2">
+					  <span class="glyphicon glyphicon-plus"></span>
+					</button>		  
+				  <h4>New Assignment</h4>
+				  <span class="text-muted">Create a new assignment.</span>
+				</div>		
+				<!--Have homework-->				
+				
+				<!--if no homework, ONLY display this!!-->
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg">
+					  <span class="glyphicon glyphicon-inbox"></span>
+					</button>				  
+				  <h4>Opps! No homework in this course yet.</h4>
+				  <span class="text-muted">You may create a new assignment <a href="#" data-toggle="modal" data-target="#myModal2">here</a>.</span>
+				</div>
+				<!--no homework-->
+				
+				<!--Modal for Displaying Homework Details-->
+				<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Title of selected homework</h4>
+					  </div>
+					  <div class="modal-body ">
+					  <dl class="dl-horizontal">
+						<dt>Assign date: </dt>
+						<dd class="text-left">DDMMYY</dd>
+						<dt>Deadline: </dt>
+						<dd class="text-left">DDMMYYYY (12:34AM)</dd>
+						<dt>Requirement: </dt>
+						<dd class="text-left">Details...Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the .open class on the parent list item. When opened, the plugin also adds .dropdown-backdrop as a click area for closing dropdown menus when clicking outside the menu. Note: The data-toggle=dropdown attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.</dd>
+					  </dl>
+					  </div>
+					</div>
+				  </div>
+				</div><!--Modal-->
+				
+				<!--Modal for assigning a new homework-->
+				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Create New Assignment</h4>
+					  </div>
+					  <div class="modal-body text-left">
+					  
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+							<label for="hwtitle" class="col-sm-2 control-label">Title</label>
+							<div class="col-sm-10">
+							  <input type="text" class="form-control" id="hwtitle" placeholder="Title">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="hwassgdate" class="col-sm-2 control-label">Assign date</label>
+							<div class="col-sm-10">
+							  <input type="text" class="form-control" id="hwassgdate" placeholder="DD/MM/YYYY">
+							</div>
+						  </div>						  
+						  <div class="form-group">
+							<label for="hwdeadline" class="col-sm-2 control-label">Deadline</label>
+							<div class="col-sm-10">
+							  <input type="text" class="form-control" id="hwdeadline" placeholder="DD/MM/YYYY(12:34PM)">
+							</div>
+						  </div>						  
+						  <div class="form-group">
+							<label for="hwrequirement" class="col-sm-2 control-label">Requirement</label>
+							<div class="col-sm-10">
+							  <textarea type="text" class="form-control" id="hwrequirement" placeholder="..." row="3"></textarea>
+							</div>
+						  </div>
+						  <div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+							</div>
+						  </div>
+						</form>
+
+					  </div>
+					  <div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Save</button>
+					  </div>
+
+					</div>
+				  </div>
+				</div><!--Modal-->
+				
+				
+			  </div>
+			  
+			  <!--End of component (2)-->
+			  
+			  
+			  <!--3. This is component 3. It will appear if user clicks a homework but component 2 will NOT disappear-->
+			  <h2 class="sub-header" id="list">Title of selected homework
+			  </h2>
+			  <div class="table-responsive">
+				<table class="table table-striped">
+				  <thead>
+					<tr>
+					  <th>Student ID</th>
+					  <th>Student Name</th>
+					  <th>Hand in or not?</th>
+					  <th>Download</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>1001</td>
+					  <td>Lorem</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td><!--icon for handed in hw-->
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1002</td>
+					  <td>amet</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1003</td>
+					  <td>Integer</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1003</td>
+					  <td>libero</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1004</td>
+					  <td>dapibus</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1005</td>
+					  <td>Nulla</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td><!--icon for not handed in hw-->
+					  <td><span class="glyphicon glyphicon-save"></span></td><!-- DOWNLOAD LINK SHOULD BE DISABLED IF STUDENT HASNT HAND IN HOMEWORK -->
+					</tr>
+					<tr>
+					  <td>1006</td>
+					  <td>nibh</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1007</td>
+					  <td>sagittis</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1008</td>
+					  <td>Fusce</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1009</td>
+					  <td>augue</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1010</td>
+					  <td>massa</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1011</td>
+					  <td>eget</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1012</td>
+					  <td>taciti</td>
+					  <td><span class="glyphicon glyphicon-ok"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1013</td>
+					  <td>torquent</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1014</td>
+					  <td>per</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+					<tr>
+					  <td>1015</td>
+					  <td>sodales</td>
+					  <td><span class="glyphicon glyphicon-remove"></span></td>
+					  <td><span class="glyphicon glyphicon-save"></span></td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div><!--End of component 3!-->
+			</div><!--col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main-->
+		  </div><!--row-->
+		</div><!--container-fluid-->
+
+		
+	</div><!--wrap-->
+
+	
+	<div id="footer">
+      <div class="container-fluid">
+        <p class="text-muted">Systax_Error</p> <!--footer在页面里显示不出来-->
+      </div><!--container-fluid-->
+    </div><!--footer-->
+
+
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+  </body>
+</html>
