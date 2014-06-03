@@ -17,7 +17,7 @@
 ###工作分工
 <table>
 <tr><th>任务</th><th>人</th><th>截止日期</th></tr>
-<tr><td>1、2、9</td><td>辜逸龙</td><td>5月16日</td></tr>
+<tr><td>1、2、9、整合</td><td>辜逸龙</td><td>5月16日</td></tr>
 <tr><td>3</td><td>王睿 王逍语</td><td>5月11日</td></tr>
 <tr><td>4</td><td>金璐</td><td>5月16日</td></tr>
 <tr><td>6</td><td>陈超</td><td>5月16日</td></tr>
