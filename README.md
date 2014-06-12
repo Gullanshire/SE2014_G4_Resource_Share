@@ -19,6 +19,6 @@ such courseware, exercise materials. They can also download any resource from th
 <tr><th>任务</th><th>人</th><th>截止日期</th></tr>
 <tr><td>1+2</td><td>陈超</td><td>6.16</td></tr>
 <tr><td>4+5+3&7.connectDBmodule</td><td>金璐</td><td>6.16 第三部分内容6.14</td></tr>
-<tr><td>(3+7).剩余部分+JS及后端编码</td><td>6.14 王逍语、王睿</td><tr>
+<tr><td>(3+7).剩余部分+JS及后端编码</td><td>6.14 王逍语、王睿</td><td>6.14</td><tr>
 <tr><td>6+8+9+3&7.securitydetectionmodule整合</td><td>辜逸龙</td><td>6.16 第三部分6.14</td></tr>
 </table>
