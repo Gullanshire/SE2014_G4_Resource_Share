@@ -26,6 +26,21 @@
       <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+     <script>
+      $(document).ready(function(){
+        $("#login").click(function(){
+          //alert($("#userid").val());
+          var obj={userid:$("#userid").val(),userpassword:$("#userpassword").val()};
+          $.getJSON("./login.php",obj,function(data){
+             if(data.test==123){
+                window.location.href = "./index.html";
+              }
+             else 
+                alert("Wrong username or password!");
+          })
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -40,13 +55,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="welcome.html">Resource Sharing System</a>
+            <a class="navbar-brand" href="./welcome.html">Resource Sharing System</a>
       </div><!--navbar-header-->
       
       <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="./homework_student.html">Homework</a></li>
-              <li><a href="./resource_index.html">Resource</a></li>
+              <li><a href="./homework.html">Homework</a></li>
+              <li><a href="./resource.html">Resource</a></li>
               <li><a href="./search.html">Search</a></li>
               <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Other Subsystem<b class="caret"></b></a>
@@ -72,31 +87,25 @@
         </div><!--container-fluid-->
         </div><!--navbar navbar-inverse navbar-fixed-top-->
 
-    <div class="alert alert-success">
-      <strong>Welcome to use the search function!</strong><p>Please input the key word.
-      <br><br>Caution: Some resource & homeworks might not be available in the result if you havn't got enough privilege. 
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome!</h1>
+        <p>This is a subsystem of teaching service system for sharing course related resource and homeworks. You could get or upload any resource you want here, even use it as your U disk online. Homeworks could also be assigned or uploaded here.</p>
+        <p>Please use your account of teaching service system to login. You could also sign up by clicking the following button.</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="">Sign up now »</a></p>
+      </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-6">
-          <h2>Search by File Name:</h2>
-          <h4>(Including all resource and homeworks)</h4>
-            <form><input type="text" class="form-control" placeholder="File Name"></form>
-          <h3>Optional Search Item:</h3>
-            <form><input type="text" class="form-control" placeholder="The Course It belongs To"></form><br>
-            <form><input type="text" class="form-control" placeholder="The Uploader"></form><br>
-            <form><input type="text" class="form-control" placeholder="The Upload Data"></form><br>
-          <button id="searchfile" type="button" class="btn btn-primary">Submit</button> 
+          <h2><a>Resource</a></h2>
+          <p>You could search for and download the resource which is upload by other students and teachers. </p>
         </div>
         <div class="col-md-6">
-          <h2>Search by Course Name</h2>
-          <h4>(Provide a specification of course and all available files under that course)</h4>
-            <form><input type="text" class="form-control" placeholder="Course Name"></form>
-          <h3>Optional Search Item:</h3>
-            <form><input type="text" class="form-control" placeholder="Teacher Name"></form><br>
-          <button id="searchfile" type="button" class="btn btn-info">Submit</button> 
+          <h2>Homework</h2>
+          <p>We also provide a convenient platform for teachers to assign homeworks and collect the finished works uploaded by students. </p>
        </div>
       </div>
 

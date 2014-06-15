@@ -18,6 +18,7 @@
     <link href="./css/dashboard.css" rel="stylesheet">
     <link href="./css/mainstyle.css" rel="stylesheet">
 	<link href="./css/sticky-footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/uploader.css" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,76 +43,54 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-          	<a class="navbar-brand" href="welcome.html">Resource Sharing System</a>
-			</div><!--navbar-header-->
-			
-		  <div class="navbar-collapse collapse">
+            <a class="navbar-brand" href="./welcome.html">Resource Sharing System</a>
+      </div><!--navbar-header-->
+      
+      <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="./homework_student.html">Homework</a></li>
-              <li><a href="./resource_index.html">Resource</a></li>
+              <li><a href="./homework.html">Homework</a></li>
+              <li><a href="./resource.html">Resource</a></li>
               <li><a href="./search.html">Search</a></li>
               <li class="dropdown">
-	              <a href="" class="dropdown-toggle" data-toggle="dropdown">Other Subsystem<b class="caret"></b></a>
-	              <ul class="dropdown-menu">
-	                <li class="dropdown-header" style="font-size:18px">The portals:</li>
-	                <li style="height:3px"><br/></li>
-	                <li><a href="">Information Management System</a></li>
-	                <li class="divider"></li>
-	                <li><a href="">Automatic Course Arrangement Subsystem</a></li>
-	                <li class="divider"></li>
-	                <li><a href="">Course Selection Subsystem</a></li>
-	                <li class="divider"></li>
-	                <li><a href="">Discussion Forum Subsystem</a></li>
-	                <li class="divider"></li>
-	                <li><a href="">Online Testing Subsystem</a></li>
-	                <li class="divider"></li>
-	                <li><a href="">Score Management Subsystem</a></li>
-	              </ul>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Other Subsystem<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header" style="font-size:18px">The portals:</li>
+                  <li style="height:3px"><br/></li>
+                  <li><a href="">Information Management System</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Automatic Course Arrangement Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Course Selection Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Discussion Forum Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Online Testing Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Score Management Subsystem</a></li>
+                </ul>
               </li>
             </ul><!--nav navbar-nav-->
-			<button id="logout" type="button" class="btn btn-success navbar-btn navbar-right">Log out</button> 
+      <button id="logout" type="button" class="btn btn-success navbar-btn navbar-right">Log out</button> 
           </div><!--/.nav-collapse -->
+
         </div><!--container-fluid-->
-        </div><!--navbar navbar-inverse navbar-fixed-top-->
-		
+        </div><!--navbar navbar-inverse navbar-fixed-top-->		
 		<div class="container-fluid">
 		  <div class="row">
-			<div class="col-sm-3 col-md-2 sidebar">
+			<div class="col-sm-3 col-md-2 sidebar" >
 			  <ul class="nav nav-sidebar">
 				<li>
-				  <a href="#" class="list-group-item">
-				  <span class="badge">4</span><!--number of available resource in this course-->
-				  Course 1
-				  </a>
-				</li>
-				<li>
-				  <a href="#" class="list-group-item">
-				  <span class="badge">11</span>
-				  Course 2
-				  </a>
-				</li>
-				<li>
-				  <a href="#" class="list-group-item">
-				  <span class="badge">2</span>
-				  Course 3
-				  </a>
-				</li>
-				<li>
-				  <a href="#" class="list-group-item">
-				  <span class="badge">7</span>
-				  Course 4
-				  </a>
-				</li>
-			  </ul>
-			  <ul class="nav nav-sidebar"><br><br><br><br><br><br><br><br><br><br><br></ul>
-			  <ul class="nav nav-sidebar">
-				<li>
-				  <a href="#" class="list-group-item">
-				  <span class="badge">7</span>
+				  <a href="#" class="list-group-item" id="myfile">
+				  <span class="badge" id="myfilenumber">7</span>
 				  My files
 				  </a>
 				</li>
-			  </ul><!--nav nav-sidebar-->
+			  </ul>
+			  <ul class="nav nav-sidebar"></ul>
+			  <ul class="nav nav-sidebar" id="course-bar">
+			 <!--JS to add course-->
+			  </ul>
+			  <!--nav nav-sidebar-->
 			</div><!--col-sm-3 col-md-2 sidebar-->
 			
 			
@@ -120,58 +99,100 @@
 			
 			<!--1. this component would show by default, then replaced by component(2)-->
 			 <div class="jumbotron">
-			  <h1>Course Name/Specification/Announcement</h1>
+			  <h1>Resource Manager</h1>
 			  <p>You may view, download or upload the resource which is classified by courses here.</p>
+			  <p>Following are the example icon of different types of resources.</p>
+			  <p>Select a course first and then click the icon to view the detail of resource and download.</p>
 			</div><!--End of component(1)-->
 			
 			  <!--2. This is component (2), it will replace component(1) after user clicks a course-->
-			  <h1 class="page-header">Resource (Click to view detail and download.)</h1>
+			  <h1 class="page-header">Resource</h1>
 
-			  <div class="row placeholders">
+			  <div class="row placeholders" id="resource-list">
 				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
 					  <span class="glyphicon glyphicon-book"></span>
 					</button>			  
-				  <h4>Title of resource</h4>
-				  <span class="text-muted">Size of resource
+				  <h4>Textbook</h4>
+				  <span class="text-muted">Illustration
 				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
 				  </span>
 				</div>
-				<!--if no resource display this-->
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
+					  <span class="glyphicon glyphicon-facetime-video"></span>
+					</button>			  
+				  <h4>Video</h4>
+				  <span class="text-muted">Illustration
+				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
+				  </span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
+					  <span class="glyphicon glyphicon-picture"></span>
+					</button>			  
+				  <h4>Picture</h4>
+				  <span class="text-muted">Illustration
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
+				  </span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
+					  <span class="glyphicon glyphicon-file"></span>
+					</button>			  
+				  <h4>Other File</h4>
+				  <span class="text-muted">Illustration
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
+				  </span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
+					  <span class="glyphicon glyphicon-stats"></span>
+					</button>			  
+				  <h4>Stats</h4>
+				  <span class="text-muted">Illustration
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
+				  </span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
+					  <span class="glyphicon glyphicon-compressed"></span>
+					</button>			  
+				  <h4>Compressed files</h4>
+				  <span class="text-muted">Illustration
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
+				  </span>
+				</div>
 				<div class="col-xs-6 col-sm-3 placeholder">
 					<button type="button" class="btn btn-default btn-lg">
 					  <span class="glyphicon glyphicon-inbox"></span>
 					</button>				  
 				  <h4>No resource in this course yet.</h4>
 				  <span class="text-muted"></span>
-				</div>	
-				<!--no resource-->
-				<!--upload resource-->
+				</div>
 				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="">
 					  <span class="glyphicon glyphicon-upload"></span>
 					</button>			  
-				  <h4>Upload Resource</h4>
+				  <h4>Upload</h4>
 				  <span class="text-muted">
-				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
 				  </span>
 				</div>
-				<!--upload resource-->
-				<!--my resource-->
 				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="">
 					  <span class="glyphicon glyphicon-book"></span>
 					</button>			  
-				  <h4>Title of resource</h4>
+				  <h4>Files uploaded by me</h4>
 				  <span class="text-muted">My file is different in color.
-				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
+				    <br><a data-toggle="modal" data-target="" href="#"></a>
 				  </span>
 				</div>
+			</div>
 				<!--my resource-->
 
-
-				<!-- Medium-Sized Modal for Upload Homework -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modals" id="modal-container">
+				<div class="modal fade row placeholders" id="upload-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 					<div class="modal-content">
 					  <div class="modal-header">
@@ -179,13 +200,17 @@
 						<h4 class="modal-title" id="myModalLabel">Upload</h4>
 					  </div>
 					  <div class="modal-body">
-						    <label for="exampleInputFile">File input</label>
-							<input type="file" id="exampleInputFile">
-							<p class="help-block">Choose your file!</p>
-							<dd class="text-left"><form><input type="text" class="form-control" placeholder="You can input the illustration here."></form><br></dd>
-					  </div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-primary">Save</button>
+							<div id="drag-and-drop-zone" class="uploader">
+								<div class="panel-body demo-panel-files" id='demo-files'>
+									<span class="demo-note">No Files have been selected/droped yet...</span>
+								</div>
+								<div class="browser">
+									<label>
+										<span>Click to open the file Browser</span>
+										<input type="file" name="files[]" multiple="multiple" title='Click to add Files'>
+									</label>
+								</div>
+							</div>
 					  </div>
 					</div>
 				  </div>
@@ -245,7 +270,7 @@
 				  </div>
 				</div><!--Modal-->
 				<!--This is the end of component(2)-->
-				
+				</div>
 				
 			  </div><!--row place holders-->
 
@@ -271,11 +296,44 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="../../dist/js/bootstrap.min.js"></script>
 	<script src="./bootstrap/js/jquery.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/uploader.min.js"></script>
+    <script type="text/javascript" src="./src/dmuploader.min.js"></script>
+    <script type="text/javascript" src="./js/re.js"></script>
 
+    <script type="text/javascript">
+	  var count=0;
+      $('#drag-and-drop-zone').dmUploader({
+        url: './upload_file.php',
+        dataType: 'json',
+        allowedTypes: 'image/*',
+        /*extFilter: 'jpg;png;gif',*/
+        onBeforeUpload: function(id){
+          $.danidemo.updateFileStatus(id, 'default', 'Uploading...');
+        },
+        onNewFile: function(id, file){
+		  if (count==0)
+		  {
+			$.danidemo.addFile('#demo-files', id, file);
+          }
+          count++;
+        },
+        onUploadProgress: function(id, percent){
+          var percentStr = percent + '%';
+
+          $.danidemo.updateFileProgress(id, percentStr);
+        },
+        onUploadSuccess: function(id, data){
+          $.danidemo.updateFileStatus(id, 'success', 'Upload Complete');
+
+          $.danidemo.updateFileProgress(id, '100%');
+        },
+        onUploadError: function(id, message){
+          $.danidemo.updateFileStatus(id, 'error', message);
+        }
+      });
+    </script>
 
   </body>
 </html>

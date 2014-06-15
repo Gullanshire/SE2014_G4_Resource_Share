@@ -1,0 +1,41 @@
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="welcome.html">Resource Sharing System</a>
+      </div><!--navbar-header-->
+      
+      <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./homework_student.html">Homework</a></li>
+              <li><a href="./resource_index.html">Resource</a></li>
+              <li><a href="./search.html">Search</a></li>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Other Subsystem<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header" style="font-size:18px">The portals:</li>
+                  <li style="height:3px"><br/></li>
+                  <li><a href="">Information Management System</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Automatic Course Arrangement Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Course Selection Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Discussion Forum Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Online Testing Subsystem</a></li>
+                  <li class="divider"></li>
+                  <li><a href="">Score Management Subsystem</a></li>
+                </ul>
+              </li>
+            </ul><!--nav navbar-nav-->
+      <button id="logout" type="button" class="btn btn-success navbar-btn navbar-right">Log out</button> 
+          </div><!--/.nav-collapse -->
+        </div><!--container-fluid-->
+        </div><!--navbar navbar-inverse navbar-fixed-top-->
