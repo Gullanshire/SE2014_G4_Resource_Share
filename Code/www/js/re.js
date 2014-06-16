@@ -125,7 +125,6 @@ function getREinfo(course_id){
 		tm="";
 		user_info=data.user_info;
 		if(data.course_info!=null){
-			re_info=data;
 			$.each(data.course_info,function(v,k){
 				if(k.reso_level=="public"){
 					if(user_info.type==k.reso_uploadertype&&user_info.id==k.reso_uploader){

@@ -12,7 +12,7 @@
     <title>Search</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="./css/mainstyle.css" rel="stylesheet">
 
@@ -74,265 +74,41 @@
 
 
     <div class="alert alert-success">
-      <p>Welcome! To start your search, input keywords below or choose advanced search.<br><strong>NOTE: You can only view the resources and homework within your privilege.</strong></p> 
+      <p>Welcome! To start your search, input keywords below.<br><strong>NOTE: You can only view the resources and homework within your privilege.</strong></p> 
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
-      
+<div id="search-input">
+      <br><br><br>
 	  <!--User选了advanced search的话，这个部分就会被下面adv search取代-->
 	  <!--SMART SEATCH-->
 	  <div class="row"> 
         <div class="col-md-8">
           <h2>Smart Search<br><br></h2>
-            <form><input type="text" class="form-control input-lg" placeholder="Enter file Name, course name or uploader."></form>
-		  <p class="help-block">Both resource and homework are searchable. or jump to <a href="#as"><em>advanced search</em></a><br><br></p>
-          <button id="searchfile" type="button" class="btn btn-primary">OK</button> 
+            <form><input type="text" id="search-keyword" class="form-control input-lg" placeholder="Enter a likely resource name."></form>
+		  <p class="help-block">Only resources are searchable and the system will display all the related resources which is visible to the public. You couldn't change & delete the resources in search module.<br><br></p>
+          <button id="search-start" type="button" class="btn btn-primary">Search!</button> 
         </div>
       </div>
+</div>
 	  <!--smart search-->
-
-	  
-	  <p><br><br><br></p>
-	  
-	  <!--ADVANCED SEATCH--><!--User选了advanced search的话 这部分才会出现，不然是不会显示的-->
-	  <div class="row">
-        <div class="col-md-8" id="as">
-          <h2>Advanced Search<br><br></h2>
-		  
-		  <h3>Search by file name: </h3><p>
-          <form><input type="text" class="form-control input-lg" placeholder="File name"></form><br>
-          <form><input type="text" class="form-control input-sm" placeholder="Course it belongs to(Optional)"></form><br>
-          <form><input type="text" class="form-control input-sm" placeholder="Uploader(Optional)"></form><br>
-          <form><input type="text" class="form-control input-sm" placeholder="Uploaded data(Optional)"></form></p>
-		  <p class="help-block">Both resource and homework are searchable<br><br></p>		  
-		  
-          <h3>Search by course name: </h3><p>
-		  <form><input type="text" class="form-control input-lg" placeholder="Course name"></form><br>
-	      <form><input type="text" class="form-control input-sm" placeholder="Teacher name(Optional)"></form></p>
-		  <p class="help-block">This function provide a specification of course and all available files under that course.<br><br><br></p>
-	  
-		  <button id="searchfile" type="button" class="btn btn-info">Search</button> 
-       </div>
-	  </div>
-	  <!--advanced search-->
-      
-	  <p><br><br><br></p>
-	  
-	  
-	  <!--只有user已经在smart search或者advanced search里面按了确定的按钮，这个部分才会显示哦。会取代之前的search页面-->
-	  <!--result出现的时候上面的Alert应该会消失~-->
-	  <!--SEARCH RESULTS-->
-			  <h1 class="page-header">Results</h1>
-			  <!--Results arranged by course-->
-			  <!--course 1-->
-			  <h2 class="page-header">COM001 Programming Concepts</h2>
-			  <div class="row placeholders">
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-folder-open"></span>
-					</button>		  
-					<h4>Title of homework1</h4>
-				  <span class="text-muted">Deadline of homework1
-				    <br>
-				  </span>
-				</div>
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-folder-open"></span>
-					</button>			  
-				  <h4>Title of homework2</h4>
-				  <span class="text-muted">Deadline of homework2<br><br></span>
-				</div>
-
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of resource1</h4>
-				  <span class="text-muted">Size of resource
-				    <br><br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-				
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of resource2</h4>
-				  <span class="text-muted">Size of resource
-				    <br><br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-
-				<!--my resource-->
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of my resource</h4>
-				  <span class="text-muted">Size of my file
-				    <br><br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-				<!--my resource-->
-
-				<!--my resource-->
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of my resource2</h4>
-				  <span class="text-muted">Size of my file
-				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-				<!--my resource-->
-			  </div><!--row place holders-->
-			  <!--End course 1 -->
-
+<div id="search-result">
+			<h1 class="page-header">Results</h1>
 			  
-			  <!--Course 2-->
-			  <h2 class="page-header">COM257 Robots</h2>
-			  <div class="row placeholders">
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-folder-open"></span>
-					</button>		  
-					<h4>Title of homework1</h4>
-				  <span class="text-muted">Deadline of homework1
-				    <br>
-				  </span>
-				</div>
+			<div class="row placeholders" id="result-list">
+			</div>
 
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of resource1</h4>
-				  <span class="text-muted">Size of resource
-				    <br><br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-				
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of resource2</h4>
-				  <span class="text-muted">Size of resource
-				    <br><br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
 
-				<!--my resource-->
-				<div class="col-xs-6 col-sm-3 placeholder">
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
-					  <span class="glyphicon glyphicon-book"></span>
-					</button>			  
-				  <h4>Title of my resource2</h4>
-				  <span class="text-muted">Size of my file
-				    <br><a data-toggle="modal" data-target="#myModal" href="#"></a>
-				  </span>
-				</div>
-				<!--my resource-->
-			  </div><!--row place holders-->
-			  <!--End course 2 -->
-			  
-			  
-			  
+			<div class="modals" id="modal-container">
+			</div>
 				<p><br><br></p>
 				<p><br><br></p>
 				<!--回到smart search-->
-				<button id="searchfile" type="button" class="btn default">Back</button> 
+				<a href="./search.html"><button id="searchfile" type="button" class="btn default">Back</button></a> 
 				<p><br><br></p>
-
-				
-				<!--Modal for Displaying Resource Details-->
-				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Title of selected resource</h4>
-					  </div>
-					  <div class="modal-body ">
-					  <dl class="dl-horizontal">
-						<dt>Upload date: </dt>
-						<dd class="text-left">DDMMYY</dd>
-						<dt>Uploader: </dt>
-						<dd class="text-left">Name.</dd>
-						<dt>Illustration: </dt>
-						<dd class="text-left">...</dd>
-						<dt>Download: </dt>
-						<dd class="text-left"><a href="">Click here.</a></dd>
-					  </dl>
-					  </div>
-					</div>
-				  </div>
-				</div><!--Modal-->
-
-
-				<!--Modal for Change My File Attributes-->
-				<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Title of selected resource</h4>
-					  </div>
-					  <div class="modal-body ">
-					  <dl class="dl-horizontal">
-						<dt>Upload date: </dt>
-						<dd class="text-left"><form><input type="text" class="form-control" placeholder="Previous Date"></form><br></dd>
-						<dt>Uploader: </dt>
-						<dd class="text-left"><form><input type="text" class="form-control" placeholder="Previous Uploader"></form><br></dd>
-						<dt>Illustration: </dt>
-						<dd class="text-left"><form><input type="text" class="form-control" placeholder="Previous Illustration"></form><br></dd>
-						<dt>Download: </dt>
-						<dd class="text-left"><a href="">Click here.</a></dd>
-						<dt>Delete: </dt>
-						<dd class="text-left"><a href="">Click here.</a></dd>
-					  </dl>
-					  </div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-primary">Save</button>
-					  </div>
-					</div>
-				  </div>
-				</div><!--Modal-->
-
-				
-				
-				<!--Modal for Displaying Homework Details-->
-				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Title of selected homework</h4>
-					  </div>
-					  <div class="modal-body ">
-					  <dl class="dl-horizontal">
-						<dt>Assign date: </dt>
-						<dd class="text-left">DDMMYY</dd>
-						<dt>Deadline: </dt>
-						<dd class="text-left">DDMMYYYY (12:34AM)</dd>
-						<dt>Requirement: </dt>
-						<dd class="text-left">Details...Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the .open class on the parent list item. When opened, the plugin also adds .dropdown-backdrop as a click area for closing dropdown menus when clicking outside the menu. Note: The data-toggle=dropdown attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.</dd>
-					  </dl>
-					  </div>
-					</div>
-				  </div>
-				</div><!--Modal-->			  
-
-
-			<!--This is the end of search result-->
-				
-	  
-	  
-	  
-	  
+</div>	  
+	  <hr>
       <footer>
         <p>Syntax_Error 2014</p>
       </footer>
@@ -342,7 +118,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <script src="./js/search.js"></script>
     <script src="./bootstrap/js/jquery.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body></html>
