@@ -1,8 +1,7 @@
 <?php error_reporting(0); require('conn_database.php');
-	$stu_id=1;
-	$teac_id=1;
-	$user_type='student';
-	$cuz_id=$_POST['cuz_id'];
+	require('characterCheck.php');
+	require('loginCheck.php');
+
 	date_default_timezone_set("Asia/Shanghai");
 	//$user_type='teacher';
 	if ($_FILES["file"]["error"] <= 0)

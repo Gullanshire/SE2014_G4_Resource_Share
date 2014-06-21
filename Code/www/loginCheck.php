@@ -1,0 +1,13 @@
+<?php
+	session_start();
+	if($_SESSION['islogin'])
+	{
+		$user_type=$_SESSION['usertype'];
+		if($user_type=='student')
+			$stu_id=$_SESSION['userid'];
+		if($user_type=='teacher')
+			$teac_id=$_SESSION['userid'];
+	}
+	else 
+		exit(2);
+?>

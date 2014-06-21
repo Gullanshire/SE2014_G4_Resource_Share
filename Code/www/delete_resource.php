@@ -1,8 +1,6 @@
 <?php error_reporting(0); require('conn_database.php');
-	$stu_id=1;
-	$teac_id=2;
-	$user_type='student';
-	//$user_type='teacher';
+	require('characterCheck.php');
+	require('loginCheck.php');
 
 	$reso_id=$_GET['reso_id'];
 	$strsql="select file_id from Re_crssFile_crssResource where reso_id=". $reso_id.";";

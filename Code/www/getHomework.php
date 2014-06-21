@@ -1,9 +1,8 @@
 <?php error_reporting(0); require('conn_database.php');
+	require('characterCheck.php');
+	require('loginCheck.php');
 	date_default_timezone_set("Asia/Shanghai");
-	$stu_id=1;
-	$teac_id=1;
-	//$user_type='student';
-	$user_type='teacher';
+
 	if ($_GET['query']=='init')
 	{
 		if($user_type=='student')

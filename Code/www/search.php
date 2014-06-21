@@ -1,8 +1,7 @@
 <?php error_reporting(0); require('conn_database.php');
-	$stu_id=1;
-	$teac_id=1;
-	//$user_type='student';
-	$user_type='student';
+	require('characterCheck.php');
+	require('loginCheck.php');
+
 	if ($_GET['query']=='search')
 	{
 		$searchkeyword=$_GET['searchkeyword'];
