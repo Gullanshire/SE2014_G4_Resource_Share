@@ -1,7 +1,7 @@
-#软件工程 
-##Syntax Error小组
+# 软件工程 
+## Syntax Error小组
 
-##Course Resource Sharing Subsystem
+## Course Resource Sharing Subsystem
 
 The subsystem is responsible for two functions. Firstly, it shares and utilizes course resources between teachers and students. Secondly, it allows students to upload their homeworks and laboratory reports.
 
@@ -14,7 +14,7 @@ such as courseware, exercise material. They can also download any resources from
 
 +   Resource retrieval: provide a search function for the users to retrieval resources.
 
-###测试文档工作分工
+### 测试文档工作分工
 <table>
 <tr><th>任务</th><th>人</th><th>截止日期</th></tr>
 <tr><td>1+2</td><td>陈超</td><td>6.16</td></tr>
